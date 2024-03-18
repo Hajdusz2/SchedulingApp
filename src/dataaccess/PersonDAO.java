@@ -48,9 +48,10 @@ public class PersonDAO {
 	 * Adds a new Person object to the list.
 	 * 
 	 * @param person The Person to add.
-	 * @throws IllegalArgumentException if the person already exists or the email is in use.
+	 * @throws IllegalArgumentException if the person already exists or the email is
+	 *                                  in use.
 	 */
-	public static void addPerson(Person person) throws Exception {
+	public void addPerson(Person person) throws Exception {
 		if (people.contains(person)) {
 			throw new IllegalArgumentException("This person already exists in the system.");
 		} else {

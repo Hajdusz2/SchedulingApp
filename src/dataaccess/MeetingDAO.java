@@ -14,7 +14,7 @@ import models.Meeting;
 public class MeetingDAO {
 	// Static list to hold Meeting objects in lieu of data storage;
 	private static List<Meeting> meetings = new ArrayList<Meeting>();
-	//Static initializer block to add default Meeting objects to the list.
+	// Static initializer block to add default Meeting objects to the list.
 	static {
 		meetings.add(new Meeting(0, LocalDateTime.of(2024, 3, 19, 8, 0)));
 		meetings.add(new Meeting(1, LocalDateTime.of(2024, 3, 20, 8, 0)));
@@ -53,7 +53,7 @@ public class MeetingDAO {
 	 * @throws IllegalArguementException if the meeting does not begin at a whole
 	 *                                   hour.
 	 */
-	public static void addMeeting(Meeting meeting) throws Exception {
+	public void addMeeting(Meeting meeting) throws Exception {
 		if (meeting.getTimeSlot().getMinute() != 0) {
 			throw new IllegalArgumentException("Meetings can only begin at whole hours.");
 		}
