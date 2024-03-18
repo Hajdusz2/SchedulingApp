@@ -47,7 +47,7 @@ public class MeetingDAO {
 	}
 
 	/**
-	 * Adds a new Meeting object to the list.
+	 * Adds a new Meeting object to the list. Does NOT create a new meeting!
 	 * 
 	 * @param meeting The Meeting to add.
 	 * @throws IllegalArguementException if the meeting does not begin at a whole
